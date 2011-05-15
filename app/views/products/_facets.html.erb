@@ -1,3 +1,4 @@
+<div class="facets">
 <%
 facets = @searcher.facets || []
   taxon_names = @taxon ? @taxon.self_and_descendants.map(&:name) : []
@@ -20,3 +21,4 @@ facets = @searcher.facets || []
     end
   end 
 %>
+</div>
