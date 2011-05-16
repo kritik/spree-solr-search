@@ -3,9 +3,10 @@ Solr Search
 
 ### Installation
 
-1. Add `gem "spree_solr_search"` to your Gemfile
+1. Add `gem "spree_solr_search", :git => "git://github.com/kritik/spree-solr-search.git"` to your Gemfile
 1. Run `bundle install`
 1. Run `rails g spree_solr_search:install`
+1. Add `unless params[:keywords].blank?` to your search results result string
 
 **NOTE:** Master branch works only with Spree 0.30.x and above. 
 If you want use this extension with Spree 0.10.x or 0.11.x, then you should use spree-0-11-stable branch

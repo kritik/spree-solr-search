@@ -1,4 +1,4 @@
-<% if suggestion = @searcher.suggest %>
+<% if suggestion = @searcher.suggest and !suggestion.eql?("is_active_t:(true)") %>
   <p>
     <%= t(:did_you_mean, :default => "Did you mean") %> 
     <%= link_to h(suggestion), url_for(request.params.merge({:keywords => suggestion})) %>?

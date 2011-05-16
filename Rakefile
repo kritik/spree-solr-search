@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |s|
   s.description = s.summary
   s.email = "roman@railsdog.com"
   s.homepage = "http://github.com/romul/spree-solr-search"
-  s.authors = ["Roman Smirnov"]
+  s.authors = ["Roman Smirnov", "Vladimir Krylov"]
   s.add_dependency 'spree_core', ['>= 0.30.1']
   s.add_dependency 'acts_as_solr_reloaded', ['>= 1.6.0']
   s.has_rdoc = false
