@@ -3,6 +3,7 @@ module Spree::Search
     protected
 
     def get_products_conditions_for(base_scope, query)
+      p PRODUCT_SOLR_FACETS
       facets = {
           :fields => PRODUCT_SOLR_FACETS,
           :browse => @properties[:facets_hash].map{|k,v| "#{k}:#{v}"},
@@ -20,8 +21,9 @@ module Spree::Search
       
       full_query += " AND store_ids:(#{current_store_id})" if current_store_id
 
+      
       result = Product.find_by_solr(full_query, search_options)
-
+      
       count = result.records.size
       products = result.records.paginate(:page => page, :per_page => per_page, :total_entries => count)
 

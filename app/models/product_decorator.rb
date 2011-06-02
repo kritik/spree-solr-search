@@ -65,6 +65,12 @@ Product.class_eval do
     get_option_values('size')
   end
   
+  def gem2_specification_option
+    value = get_option_values('gem2_specification')
+    p value
+    value
+  end
+  
   def get_option_values(option_name)
     sql = <<-eos
       SELECT DISTINCT ov.id, ov.presentation
