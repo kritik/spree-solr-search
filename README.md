@@ -31,7 +31,8 @@ To configure production Solr server:
     
 ### Setting up for production
 
-https://gist.github.com/1340264
+sudo nano /usr/share/solr/conf/schema.xml
+put content from https://gist.github.com/1340264
 
 
 ### Running rake tasks in background
