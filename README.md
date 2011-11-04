@@ -28,6 +28,10 @@ To stop Solr demo-server:
 To configure production Solr server:
 
     edit RAILS_ROOT/config/solr.yml
+    
+### Setting up for production
+
+https://gist.github.com/1340264
 
 
 ### Running rake tasks in background
