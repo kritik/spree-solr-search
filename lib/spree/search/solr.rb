@@ -57,7 +57,7 @@ module Spree::Search
         next if options.size <= 1
         facet = Facet.new(name.sub('_facet', ''))
         options.each do |value, count|
-          facet.options << FacetOption.new(value, count)
+          facet.options << FacetOption.new(value, count, facet.name)
         end
         facets << facet
       end
@@ -78,9 +78,11 @@ module Spree::Search
   class FacetOption
     attr_accessor :name
     attr_accessor :count
-    def initialize(name, count)
+    attr_accessor :facet_name
+    def initialize(name, count, facet_name)
       self.name = name
       self.count = count
+      self.facet_name = facet_name
     end    
   end
 end
